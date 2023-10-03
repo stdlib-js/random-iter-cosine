@@ -35,19 +35,30 @@ limitations under the License.
 
 > Create an iterator for generating pseudorandom numbers drawn from a [raised cosine][cosine] distribution.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-iter-cosine
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-cosine@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-iter-cosine/tags). For example,
-
-```javascript
-import iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-cosine@v0.1.0-deno/mod.js';
+var iterator = require( '@stdlib/random-iter-cosine' );
 ```
 
 #### iterator( mu, s\[, options] )
@@ -90,7 +101,7 @@ The function accepts the following `options`:
 To use a custom PRNG as the underlying source of uniformly distributed pseudorandom numbers, set the `prng` option.
 
 ```javascript
-import minstd from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd@deno/mod.js';
+var minstd = require( '@stdlib/random-base-minstd' );
 
 var it = iterator( 2.0, 4.0, {
     'prng': minstd.normalized
@@ -198,7 +209,7 @@ The returned iterator protocol-compliant object has the following properties:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-cosine@deno/mod.js';
+var iterator = require( '@stdlib/random-iter-cosine' );
 
 var it;
 var r;
@@ -246,7 +257,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -276,8 +287,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/random-iter-cosine.svg
 [npm-url]: https://npmjs.org/package/@stdlib/random-iter-cosine
 
-[test-image]: https://github.com/stdlib-js/random-iter-cosine/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/random-iter-cosine/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/random-iter-cosine/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/random-iter-cosine/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/random-iter-cosine/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/random-iter-cosine?branch=main
@@ -308,11 +319,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [cosine]: https://en.wikipedia.org/wiki/Raised_cosine_distribution
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/deno
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 <!-- <related-links> -->
 
-[@stdlib/random/base/cosine]: https://github.com/stdlib-js/random-base-cosine/tree/deno
+[@stdlib/random/base/cosine]: https://github.com/stdlib-js/random-base-cosine
 
 <!-- </related-links> -->
 
